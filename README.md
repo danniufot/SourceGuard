@@ -1,4 +1,12 @@
+![SourceGuard](https://img.shields.io/badge/GenLayer-Intelligent%20Contract-blue)
+![Status](https://img.shields.io/badge/Status-Deployed-success)
+![Version](https://img.shields.io/badge/Version-V8-purple)
+
 # SourceGuard
+
+> Decentralized multi-source web claim verification powered by GenLayer Intelligent Contracts.
+
+SourceGuard evaluates claims against live web sources using GenLayer's web access, nondeterministic execution, validator verification, deterministic decision logic, and persistent onchain history.# SourceGuard
 
 SourceGuard is a GenLayer intelligent contract for multi-source web claim verification.
 
