@@ -1,14 +1,8 @@
-![SourceGuard](https://img.shields.io/badge/GenLayer-Intelligent%20Contract-blue)
-![Status](https://img.shields.io/badge/Status-Deployed-success)
-![Version](https://img.shields.io/badge/Version-V8-purple)
-
 # SourceGuard
 
 > Decentralized multi-source web claim verification powered by GenLayer Intelligent Contracts.
 
-SourceGuard evaluates claims against live web sources using GenLayer's web access, nondeterministic execution, validator verification, deterministic decision logic, and persistent onchain history.# SourceGuard
-
-SourceGuard is a GenLayer intelligent contract for multi-source web claim verification.
+SourceGuard evaluates claims against live web sources using GenLayer web access, nondeterministic execution, validator verification, deterministic decision logic, and persistent onchain history.
 
 ## Overview
 
@@ -48,7 +42,7 @@ SourceGuard uses GenLayer's validator mechanism.
 
 Validators independently evaluate the sources and compare the resulting source-level verdicts.
 
-The contract only accepts the result when the required verification conditions are satisfied.
+The contract separates nondeterministic source analysis from deterministic state updates and final verdict calculation.
 
 ## Persistent Verification History
 
@@ -58,19 +52,41 @@ Previous verification records can be queried through the contract's public view 
 
 ## Example
 
-Claim:
+### Claim
 
 The Example Domain webpage is provided for documentation examples.
 
-Sources:
+### Sources
 
 https://example.com/
 
 https://iana.org/help/example-domains
 
-Expected result:
+### Expected Result
 
 SUPPORTED
+
+## GenLayer Deployment
+
+SourceGuard V8 was successfully deployed and tested on GenLayer.
+
+### Deployment Status
+
+FINALIZED
+
+### Contract Address
+
+0x9c58ad6ba1b42b93336e59731adbdafdbd3dff33d759c3a1137045ebe0cd7eaf
+
+### Transaction Evidence
+
+Transaction 1:
+
+0x64e6ca416900417f4f679482442b28735d67642adcd020a831db8919ce9215b7
+
+Transaction 2:
+
+0xE2920f5dbD7541Ee989834c2aaceA00e594f8EA8
 
 ## Testing
 
@@ -83,26 +99,14 @@ SourceGuard has been tested with:
 - Authority classification
 - Freshness classification
 - Evidence quality
-- ## GenLayer Deployment
-
-SourceGuard V8 was deployed and successfully tested on GenLayer.
-
-Deployment status:
-
-FINALIZED
-
-Contract address:
-
-0xE2920f5dbD7541Ee989834c2aaceA00e594f8EA8
-
-The deployed contract was tested through multiple verification transactions, including supported and unsupported claims.
-
-All tested transactions reached successful consensus.
+- Deterministic verdict calculation
 - Validator verification
 - Persistent verification history
 
+All completed tests returned the expected results and successfully reached finalization/consensus.
+
 ## Project Status
 
-SourceGuard V8 has been successfully deployed and tested on GenLayer.
+SourceGuard V8 is deployed and tested on GenLayer.
 
-This project is an experimental demonstration of decentralized web-source verification using GenLayer intelligent contracts.
+This project is an experimental demonstration of decentralized web-source verification using GenLayer Intelligent Contracts.
