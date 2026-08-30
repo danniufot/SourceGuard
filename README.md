@@ -75,6 +75,21 @@ SourceGuard has been tested with:
 - Authority classification
 - Freshness classification
 - Evidence quality
+- ## GenLayer Deployment
+
+SourceGuard V8 was deployed and successfully tested on GenLayer.
+
+Deployment status:
+
+FINALIZED
+
+Contract address:
+
+0xE2920f5dbD7541Ee989834c2aaceA00e594f8EA8
+
+The deployed contract was tested through multiple verification transactions, including supported and unsupported claims.
+
+All tested transactions reached successful consensus.
 - Validator verification
 - Persistent verification history
 
