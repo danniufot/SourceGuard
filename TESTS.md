@@ -1,222 +1,206 @@
-\# SourceGuard Test Results
+# SourceGuard V8 Test Evidence
 
+## Test Environment
 
+Project: SourceGuard
 
-\## Test 1 — Supporting Claim
+Network: GenLayer
 
+Version: V8
 
+Deployment status: FINALIZED
 
-Claim:
+---
 
+## Test 1 — Supported Claim
 
+### Claim
 
 The Example Domain webpage is provided for documentation examples.
 
-
-
-Sources:
-
-
+### Source 1
 
 https://example.com/
 
-
+### Source 2
 
 https://iana.org/help/example-domains
 
-
-
-Expected:
-
-
+### Expected Result
 
 SUPPORTED
 
-
-
-Result:
-
-
+### Observed Result
 
 SUPPORTED
 
+### Evidence
 
+Both sources were successfully retrieved and analyzed.
 
-Status:
+Source-level verdicts were returned successfully.
 
-
+### Status
 
 PASS
 
+---
 
+## Test 2 — Unsupported Claim
 
-\---
-
-
-
-\## Test 2 — Unsupported Claim
-
-
-
-Claim:
-
-
+### Claim
 
 The Example Domain website sells automobiles in Nigeria.
 
-
-
-Sources:
-
-
+### Source 1
 
 https://example.com/
 
-
+### Source 2
 
 https://iana.org/help/example-domains
 
+### Expected Result
 
+NOT_SUPPORTED
 
-Expected:
+### Observed Result
 
+NOT_SUPPORTED
 
+### Evidence
 
-NOT\_SUPPORTED
+The sources did not provide evidence supporting the claim.
 
-
-
-Result:
-
-
-
-NOT\_SUPPORTED
-
-
-
-Status:
-
-
+### Status
 
 PASS
 
+---
 
+## Test 3 — Source Evidence
 
-\---
+SourceGuard successfully returned evidence text for the analyzed sources.
 
-
-
-\## Test 3 — Evidence Extraction
-
-
-
-The contract successfully returned evidence text for both sources.
-
-
-
-Status:
-
-
+### Status
 
 PASS
 
+---
 
+## Test 4 — Authority Classification
 
-\---
+SourceGuard successfully classified source authority.
 
+Possible classifications:
 
+- HIGH
+- MEDIUM
+- LOW
+- UNKNOWN
 
-\## Test 4 — Authority Classification
-
-
-
-The contract successfully classified source authority.
-
-
-
-Status:
-
-
+### Status
 
 PASS
 
+---
 
+## Test 5 — Freshness Classification
 
-\---
+SourceGuard successfully classified source freshness.
 
+Possible classifications:
 
+- CURRENT
+- RECENT
+- OLD
+- UNKNOWN
 
-\## Test 5 — Freshness Classification
-
-
-
-The contract successfully classified source freshness.
-
-
-
-Status:
-
-
+### Status
 
 PASS
 
+---
 
+## Test 6 — Evidence Quality
 
-\---
+SourceGuard successfully calculated evidence quality.
 
+Possible results:
 
+- STRONG
+- MODERATE
+- WEAK
 
-\## Test 6 — Evidence Quality
-
-
-
-The contract successfully calculated source and overall evidence quality.
-
-
-
-Status:
-
-
+### Status
 
 PASS
 
+---
 
+## Test 7 — Deterministic Verdict
 
-\---
+SourceGuard calculates the final verdict independently from the LLM's free-form response.
 
+### Rules
 
+SUPPORTED + SUPPORTED
 
-\## Test 7 — Validator Verification
+= SUPPORTED
 
+NOT_SUPPORTED + NOT_SUPPORTED
 
+= NOT_SUPPORTED
 
-The contract successfully reached consensus after independent validator evaluation.
+Any other combination
 
+= INCONCLUSIVE
 
-
-Status:
-
-
-
-PASS
-
-
-
-\---
-
-
-
-\## Test 8 — Persistent History
-
-
-
-Verification history was successfully stored and queried.
-
-
-
-Status:
-
-
+### Status
 
 PASS
 
+---
+
+## Test 8 — Validator Verification
+
+The SourceGuard validator independently evaluated the source analysis.
+
+Successful tests reached consensus and finalized.
+
+### Status
+
+PASS
+
+---
+
+## Test 9 — Persistent Verification History
+
+SourceGuard successfully stored verification records.
+
+The verification history was queried through the contract's public view functions.
+
+### Status
+
+PASS
+
+---
+
+## Summary
+
+SourceGuard V8 successfully demonstrated:
+
+- Multi-source web retrieval
+- Source-level claim verification
+- Evidence extraction
+- Authority classification
+- Freshness classification
+- Evidence quality scoring
+- Deterministic final verdicts
+- Validator-based verification
+- Consensus
+- Persistent verification history
+
+Overall test status:
+
+PASS
